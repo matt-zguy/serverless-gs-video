@@ -12,10 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.466.0",
-    "bluebird": "^3.5.5",
     "fs": "0.0.1-security",
-    "lodash": "^4.17.11",
-    "uuidv4": "^4.0.0"
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
     "@types/jest": "^24.0.13",

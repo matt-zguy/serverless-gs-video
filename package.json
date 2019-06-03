@@ -1,0 +1,28 @@
+{
+  "name": "grandshake-vod-media-convert-processing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.ts",
+  "scripts": {
+    "test": "jest",
+    "deploy": "sls deploy --profile grandshake",
+    "offline": "sls offline"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.466.0",
+    "bluebird": "^3.5.5",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.11",
+    "uuidv4": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "jest": "^24.8.0",
+    "serverless-offline": "^4.10.6",
+    "serverless-plugin-typescript": "^1.1.7",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.1"
+  }
+}

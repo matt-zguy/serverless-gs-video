@@ -1,0 +1,42 @@
+Resources:
+  GrandshakeVideoOutputBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: grandshake-video-output
+      # Set the CORS policy
+      CorsConfiguration:
+        CorsRules:
+          - AllowedOrigins:
+              - '*'
+            AllowedHeaders:
+              - '*'
+            AllowedMethods:
+              - GET
+              - PUT
+              - POST
+              - DELETE
+              - HEAD
+            MaxAge: 3000
+  GrandshakeVideoOutputBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket:
+        Ref: GrandshakeVideoOutputBucket
+      PolicyDocument:
+        Statement:
+          - Action:
+              - "s3:GetObject"
+            Effect: "Allow"
+            Resource:
+              Fn::Join:
+                - ""
+                - - "arn:aws:s3:::"
+                  - Ref: "GrandshakeVideoOutputBucket"
+                  - "/*"
+            Principal: "*"
+
+# Print out the name of the bucket that is created
+Outputs:
+  GrandshakeVideoOutputBucket:
+    Value:
+      Ref: GrandshakeVideoOutputBucket

@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.466.0",
+    "aws-sdk": "^2.814.0",
     "fs": "0.0.1-security",
     "lodash": "^4.17.11"
   },
